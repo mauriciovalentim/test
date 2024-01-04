@@ -17,7 +17,15 @@ def formatData(info, maxValues):
 
 
 maxValues, maxDQOSaida = getMaxValues()
-loaded_model, data, scaler = pickle.load(open('saved_regressor.pkl', 'rb'))
+import os
+
+file_path = 'saved_regressor.pkl'
+
+if not os.path.exists(file_path):
+    raise FileNotFoundError(f'O arquivo {file_path} não foi encontrado.')
+else:
+    loaded_model, data, scaler = pickle.load(open(file_path, 'rb'))
+
 choosen_cols = [
     # 'HORA',
     'TEMPERATURA_ENTRADA',
