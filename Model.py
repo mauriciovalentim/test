@@ -19,7 +19,7 @@ def formatData(info, maxValues):
 maxValues, maxDQOSaida = getMaxValues()
 import os
 
-file_path = 'saved_regressor.pkl'
+file_path = './saved_regressor.pkl'
 
 if not os.path.exists(file_path):
     raise FileNotFoundError(f'O arquivo {file_path} não foi encontrado.')
@@ -75,14 +75,13 @@ def getSaidaDBO(temperatura, ph, ssd, sst, st, dqo, dbo, og):
 
     des = pd.DataFrame(saidaDBO_normalizado)
 
-    print(scaler.inverse_transform([des] ))
 
     return 1
 
 
 
 
-# teste = getSaidaDBO(19, 4, 0.15, 0.15, 0.35, 1542.45, 325, 0.15) 
+teste = getSaidaDBO(19, 4, 0.15, 0.15, 0.35, 1542.45, 325, 0.15) 
 
 # TEMPERATURA_ENTRADA: 18.90 / 38.4
 # PH_ENTRADA: 3.26 / 26.2
