@@ -16,6 +16,7 @@ og = st.number_input("ÓLEOS E GRAXAS - ENTRADA", format="%.2f")
 
 calc = st.button("Calcular", type="primary")
 if calc:
-    result = Model.getSaidaDBO(
-        temperatura, ph, ssd, sst, solidosTotais, dqo, dbo, og)
-    st.write(f"DQO Saída: {result}")
+    # result = Model.getSaidaDBO(
+    #     temperatura, ph, ssd, sst, solidosTotais, dqo, dbo, og)
+    # st.write(f"DQO Saída: {result}")
+    st.write(f"DQO Saída: {'test'}")
