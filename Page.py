@@ -1,5 +1,5 @@
 import streamlit as st
-import Model
+# import Model
 
 st.set_page_config(page_title="Modelador")
 
