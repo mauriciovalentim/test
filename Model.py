@@ -19,7 +19,7 @@ def get_saida_dbo(*info):
     normalized_data = scaler_instance.normalize(original_data)
     # Obtendo saída normalizada
     # normalized_dbo = loaded_model.predict(normalized_data)[0]
-    normalized_dbo = normalized_data * 0.98
+    normalized_dbo = 10
     # Desnormalizando saída
     desnormalized_dbo = scaler_instance.desnormalize(normalized_dbo)
     # Retornando resultado (DBO SAÍDA DESNORMALIZADA)
